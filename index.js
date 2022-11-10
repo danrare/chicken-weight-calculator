@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function (){
     document.getElementById("add-el").disabled = true;
 
     document.getElementById("average-el").disabled = true;
+    document.getElementById("total-el").disabled = true;
 
 
     if (document.getElementById("add-el").disabled === true){
@@ -32,12 +33,11 @@ document.addEventListener("DOMContentLoaded", function (){
 
             document.querySelector("ul").append(li);
     
-            console.log(weights);
     
             document.getElementById("weight-el").value = '';
     
             document.getElementById("add-el").disabled = true;
-            
+            document.getElementById("total-el").disabled = false;
             document.getElementById("add-el").classList.add("disabled");
         }
     }
