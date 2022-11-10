@@ -1,0 +1,68 @@
+body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+
+input[type="number"]{
+    padding:0.5rem;
+    font-size:0.825rem;
+    margin:1rem 0;
+}
+
+input[type="submit"], button{
+    padding: 0.5rem 0;
+    width: 150px;
+    font-weight: bold;
+    background-color: mediumseagreen;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+input[type="submit"]:is(:hover, :focus),button:is(:hover, :focus){
+    background-color:green;
+    transition: all 0.3s ease-in-out;     
+}
+
+
+
+ul{
+    font-weight:bold;
+}
+
+li{
+    margin:0.4rem 0;
+    list-style-type:decimal-leading-zero;
+    text-align:left;
+
+}
+
+/* UTILITY CLASS */
+
+.no-wrap{
+    white-space:nowrap;
+}
+
+.disabled{
+    opacity:0.5;
+}
+
+/* CLASS STYLES */
+
+.result{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    width:100%;
+    margin:1rem 0;
+}
+
+.output{
+    margin:0.5rem 0;
+}
