@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
     document.getElementById("average-el").disabled = true;
 
+
     if (document.getElementById("add-el").disabled === true){
         document.getElementById("add-el").classList.add("disabled");
 
@@ -45,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function (){
         for (let i = 0; i<weights.length; i++){
             total+=weights[i];
         }
-        document.getElementById("tot").textContent = "Total weight is: " + total + " kg";
+        document.getElementById("tot").textContent = "Total weight is: " + total + " g";
 
         document.getElementById("average-el").disabled = false;
 
@@ -56,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
     document.getElementById("average-el").onclick = ()=>{
         let average = Math.round(total/weights.length);
-        document.getElementById("avg").textContent = "Average weight is: " + average + " kg";
+        document.getElementById("avg").textContent = "Average weight is: " + average + " g";
     }
     
 })
