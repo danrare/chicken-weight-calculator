@@ -62,13 +62,17 @@ document.addEventListener("DOMContentLoaded", function (){
     }
 
     document.getElementById("remove-el").onclick = ()=>{
-        weights.pop();
-        document.querySelector("li").remove();
+
+        let ul = document.querySelector("ul");
+        
+        weights.pop()
+        ul.removeChild(ul.lastChild);
+
+        
 
         if(weights.length === 0){
             document.getElementById("remove-el").disabled = true;
         }
-        console.log(weights);
     }
 
     document.getElementById("total-el").onclick = ()=>{
@@ -76,14 +80,10 @@ document.addEventListener("DOMContentLoaded", function (){
         if (weights.length !== 0){
             for (let i = 0; i<weights.length; i++){
             total+=weights[i];
-
-            // total = weights[i];
         }
         document.getElementById("tot").textContent = "Total weight is: " + total + " g";
 
-        // if(weights === []){
-        //     alert("Error, can't take value of zero")
-        // }
+        document.getElementById("remove-el").disabled = true;
 
         document.getElementById("average-el").disabled = false;
 
