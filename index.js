@@ -30,9 +30,7 @@ document.addEventListener("DOMContentLoaded", function (){
             li.innerHTML = document.getElementById("weight-el").value;
 
             document.querySelector("ul").append(li);
-    
-            console.log(weights);
-    
+            
             document.getElementById("weight-el").value = '';
     
             document.getElementById("add-el").disabled = true;
