@@ -5,32 +5,20 @@ document.addEventListener("DOMContentLoaded", function (){
 
     let count = 0;
 
-    document.getElementById("add-el").disabled = true;
 
-    document.getElementById("average-el").disabled = true;
+    document.querySelectorAll(".btn-el").forEach(button =>{
+        button.disabled = true;
+        button.classList.add("disabled");
+    });
+
     
-    document.getElementById("total-el").disabled = true;
-
-    document.getElementById("remove-el").disabled = true;
-
-    if (document.getElementById("add-el").disabled === true){
-        document.getElementById("add-el").classList.add("disabled");
-
-        if(document.getElementById("average-el").disabled === true){
-            document.getElementById("average-el").classList.add("disabled")
-        }
-
-        if (document.getElementById("total-el").disabled === true){
-            document.getElementById("total-el").classList.add("disabled");
-        }
-
-        if (document.getElementById("remove-el").disabled === true){
-            document.getElementById("remove-el").classList.add("disabled");
-        }
-    }
-
     document.getElementById("weight-el").onkeyup = ()=>{
-        document.getElementById("add-el").disabled = false;
+        
+        if(document.getElementById('weight-el').value.length === 0){
+                document.getElementById('add-el').disabled = true;
+            }else{
+                document.getElementById("add-el").disabled = false;
+            }
 
         document.getElementById("add-el").classList.remove("disabled");
 
